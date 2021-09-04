@@ -14,7 +14,7 @@ const Sidebar = (props) => {
       <body className="antialiased bg-body text-body font-body overflow ">
         <div>
           <div>
-            <div className="block navbar-menu pb-2  relative z-50 ">
+            <div className="block navbar-menu pb-2  relative z-10 ">
               <nav className="fixed top-0 left-0 bottom-0 m-6 overflow-y-hidden overflow-x-hidden rounded-large flex flex-col w-3/4 lg:w-80 sm:max-w-xs pt-6 pb-8 bg-dark-2  ">
                 <div className="flex w-full items-center px-6 pb-6 mb-6">
                   <div className="flex item-center">
@@ -67,7 +67,7 @@ const Sidebar = (props) => {
                               alt="logo"
                             />
                           </span>{" "}
-                          <span>Home</span>
+                          <span>Acoustic guiter</span>
                         </p>
                       </div>
                     </li>
@@ -82,7 +82,7 @@ const Sidebar = (props) => {
                               alt="logo"
                             />
                           </span>{" "}
-                          <span>Home</span>
+                          <span>Electric guiter</span>
                         </p>
                       </div>
                     </li>{" "}
@@ -99,7 +99,7 @@ const Sidebar = (props) => {
                               alt="logo"
                             />
                           </span>{" "}
-                          <span>Home</span>
+                          <span>Yamaha</span>
                         </p>
                       </div>
                     </li>
@@ -114,13 +114,13 @@ const Sidebar = (props) => {
                               alt="logo"
                             />
                           </span>{" "}
-                          <span>Home</span>
+                          <span>Songs</span>
                         </p>
                       </div>
                     </li>
                     <li>
                       <div className="flex items-center mt-40 pl-3 py-2 pr-4 rounded ">
-                        <button className="inline-flex items-center w-full  justify-center h-12 px-10 py-0 text-base font-normal text-center text-white no-underline align-middle transition-all duration-300 ease-in-out bg-transparent border-2 border-dark-1 border-solid rounded-full cursor-pointer ">
+                        <button className="inline-flex items-center w-full  justify-center h-12 px-10 py-0 text-base font-normal text-center text-white  border-2 border-dark-1 border-solid rounded-full cursor-pointer ">
                           Lock
                         </button>
                       </div>
@@ -130,11 +130,18 @@ const Sidebar = (props) => {
               </nav>
             </div>
 
-            <div className="mx-auto lg:ml-80 divide-y-l divide-white">
+            <div className="mx-auto lg:ml-80 divide-y-l divide-dark-2 pl-16 pr-16">
               <section className="py-6 px-6 bg-dark-1  ">
                 <nav className="relative">
                   <div className="flex items-center ">
-                    <div className="flex items-center mr-auto"> </div>
+                    <div className="flex items-center mr-auto">
+                      {" "}
+                      <div className="">
+                        <p className="text-white text-sm font-medium">
+                          Instruments / Fender / Electric guiter
+                        </p>
+                      </div>
+                    </div>
 
                     <ul className="flex lg:justify-end ml-auto mr-6">
                       <li className="mr-6">
@@ -152,30 +159,15 @@ const Sidebar = (props) => {
                           </svg>
                         </p>
                       </li>
-                      <li>
-                        <p className="text-gray-200 hover:text-gray-300">
-                          <svg
-                            className="h-5 w-5"
-                            viewbox="0 0 16 20"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M14 11.18V8C13.9986 6.58312 13.4958 5.21247 12.5806 4.13077C11.6655 3.04908 10.3971 2.32615 9 2.09V1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 0 8 0C7.73478 0 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734784 7 1V2.09C5.60294 2.32615 4.33452 3.04908 3.41939 4.13077C2.50425 5.21247 2.00144 6.58312 2 8V11.18C1.41645 11.3863 0.910998 11.7681 0.552938 12.2729C0.194879 12.7778 0.00173951 13.3811 0 14V16C0 16.2652 0.105357 16.5196 0.292893 16.7071C0.48043 16.8946 0.734784 17 1 17H4.14C4.37028 17.8474 4.873 18.5954 5.5706 19.1287C6.26819 19.6621 7.1219 19.951 8 19.951C8.8781 19.951 9.73181 19.6621 10.4294 19.1287C11.127 18.5954 11.6297 17.8474 11.86 17H15C15.2652 17 15.5196 16.8946 15.7071 16.7071C15.8946 16.5196 16 16.2652 16 16V14C15.9983 13.3811 15.8051 12.7778 15.4471 12.2729C15.089 11.7681 14.5835 11.3863 14 11.18ZM4 8C4 6.93913 4.42143 5.92172 5.17157 5.17157C5.92172 4.42143 6.93913 4 8 4C9.06087 4 10.0783 4.42143 10.8284 5.17157C11.5786 5.92172 12 6.93913 12 8V11H4V8ZM8 18C7.65097 17.9979 7.30857 17.9045 7.00683 17.7291C6.70509 17.5536 6.45451 17.3023 6.28 17H9.72C9.54549 17.3023 9.29491 17.5536 8.99317 17.7291C8.69143 17.9045 8.34903 17.9979 8 18ZM14 15H2V14C2 13.7348 2.10536 13.4804 2.29289 13.2929C2.48043 13.1054 2.73478 13 3 13H13C13.2652 13 13.5196 13.1054 13.7071 13.2929C13.8946 13.4804 14 13.7348 14 14V15Z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </p>
-                      </li>
                     </ul>
                     <div>
-                      <button className="flex items-center w-10 h-10 rounded-full bg-primary-2 mr-2">
+                      <button className="flex items-center w-10 h-10 rounded-full bg-gradient-to-r from-primary-1 to-primary-2 mr-2">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="h-6 w-6"
+                          className="h-8 w-8 pl-2 "
                           fill="none"
                           viewBox="0 0 24 24"
-                          stroke="currentColor"
+                          stroke="#e9686a"
                         >
                           <path
                             stroke-linecap="round"
@@ -185,6 +177,14 @@ const Sidebar = (props) => {
                           />
                         </svg>
                       </button>
+                      <div className="absolute right-0 mt-2 w-40 rounded-lg shadow-lg bg-dark-2 divide-y-2 divide-dark-1">
+                        <div class="block  px-4 py-2 text-md text-white  ">
+                          File
+                        </div>
+                        <div class="block  px-4 py-2 text-md text-white  ">
+                          Folder
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </nav>
