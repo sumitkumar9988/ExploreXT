@@ -1,14 +1,24 @@
 import React from "react";
 import data from "./../utils/file.json";
 import docimage from "./../Asset/document.png";
+import axios from "axios";
 const Newfile = ({ onOpenNewFile }) => {
   const [name, setName] = React.useState("");
-  const submithandler = () => {
-    data.push({
-      name: name,
-    });
-    console.log(data);
-    onOpenNewFile();
+  const submithandler = async () => {
+    axios
+      .post(
+        "https://modest-ardinghelli-327ca1.netlify.app/.netlify/functions/api/createfile",
+        {
+          folder: "61346f2b48a85931f86e2b39",
+          name: name,
+        }
+      )
+      .then((data) => {
+        onOpenNewFile();
+      })
+      .catch((err) => {
+        onOpenNewFile();
+      });
   };
   return (
     <div>
