@@ -1,6 +1,15 @@
 import React from "react";
+import data from "./../utils/file.json";
 import docimage from "./../Asset/document.png";
-const Newfile = () => {
+const Newfile = ({ onOpenNewFile }) => {
+  const [name, setName] = React.useState("");
+  const submithandler = () => {
+    data.push({
+      name: name,
+    });
+    console.log(data);
+    onOpenNewFile();
+  };
   return (
     <div>
       <div className="">
@@ -13,14 +22,19 @@ const Newfile = () => {
                 </div>
                 <div className="pt-4 pl-8 ">
                   <input
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="w-60 px-4 py-2 bg-dark-2 text-dark-3 tex  border-2 border-dark-1 outline-dark-2 border-solid rounded active:outline-none"
                     placeholder="Enter File Name..."
                   ></input>
                 </div>
               </div>
               <div className="flex items-center justify-center pb-8 pt-8">
-                <button className="inline-flex items-center w-6/12  justify-center h-12 px-12 py-0 text-base font-normal text-center text-white  border-2 border-dark-1 border-solid rounded-full cursor-pointer ">
-                  Lock
+                <button
+                  onClick={submithandler}
+                  className="inline-flex items-center w-6/12  justify-center h-12 px-12 py-0 text-base font-normal text-center text-white  border-2 border-dark-1 border-solid rounded-full cursor-pointer "
+                >
+                  Save
                 </button>
               </div>
             </div>

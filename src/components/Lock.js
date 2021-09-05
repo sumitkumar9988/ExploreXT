@@ -1,7 +1,7 @@
 import React from "react";
 import docimage from "./../Asset/document.png";
 
-const Lock = () => {
+const Lock = ({ onflipLockScreen }) => {
   return (
     <div>
       <div>
@@ -24,7 +24,10 @@ const Lock = () => {
                   </div>
                 </div>
                 <div className="flex items-center justify-center pb-8 pt-8">
-                  <button className="inline-flex items-center w-6/12  justify-center h-12 px-12 py-0 text-base font-normal text-center text-white  border-2 border-dark-1 border-solid rounded-full cursor-pointer ">
+                  <button
+                    onClick={onflipLockScreen}
+                    className="inline-flex items-center w-6/12  justify-center h-12 px-12 py-0 text-base font-normal text-center text-white  border-2 border-dark-1 border-solid rounded-full cursor-pointer "
+                  >
                     Unlock
                   </button>
                 </div>
